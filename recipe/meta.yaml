@@ -1,5 +1,5 @@
 {% set name = "vbmicrolensing" %}
-{% set version = "5.4.1" %}
+{% set version = "5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7640103ebfb6b5ac4743583e4d253a812da7a4d65550f5a92ad5421ef20d4e1c
+  sha256: c604b7670fd7d99ec5177a95cebee3eee2d67c3a7ea3da87be88aa6eaa04248e
 
 
 build:
-  number: 1
+  number: 0
   script:
     - export CMAKE_GENERATOR=Ninja  # [unix]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
